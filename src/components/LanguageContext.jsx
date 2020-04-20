@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const LanguageContext = createContext();
@@ -6,8 +6,16 @@ const LanguageContext = createContext();
 const LanguageProvider = ({ children, config }) => {
   const [store, setStore] = useState(config);
 
+  useEffect(() => {
+    const currentLanguage =
+      localStorage.getItem(config.localStorageKey) || config.defaultLanguage;
+
+    changeCurrentLanguage(currentLanguage);
+  }, []);
+
   const changeCurrentLanguage = name => {
     setStore({ ...store, currentLanguage: name });
+    localStorage.setItem(store.localStorageKey, name);
   };
 
   return (

@@ -1,6 +1,6 @@
 {
   "name": "react-language-support",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Easy to use multi-language support library for React",
   "author": "hututudor",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepublish": "run-s build",
-    "test": "run-s test:unit test:lint test:build tests",
+    "test": "run-s test:unit test:lint test:build src/tests",
     "test:build": "run-s build",
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",

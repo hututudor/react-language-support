@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
 
-import { LanguageProvider, LanguageContext, Lang } from 'react-language-support';
+import {
+  LanguageProvider,
+  LanguageContext,
+  Lang,
+  createLanguageConfig
+} from 'react-language-support';
 
 const languageConfig = {
   languages: {
@@ -11,9 +16,7 @@ const languageConfig = {
       hello: 'Bonjour {{name}}!'
     }
   },
-  currentLanguage: 'en',
-  defaultLanguage: 'fr',
-  localStorageKey: ''
+  localStorageKey: 's'
 };
 
 const Buttons = () => {
@@ -27,13 +30,16 @@ const Buttons = () => {
       <button onClick={() => context.changeCurrentLanguage('en')}>
         Change to en
       </button>
+
+      {JSON.stringify(context, null, 2)}
+      <br />
     </>
   );
 };
 
 const App = () => {
   return (
-    <LanguageProvider config={languageConfig}>
+    <LanguageProvider config={createLanguageConfig(languageConfig)}>
       <Buttons />
       <Lang replace={{ name: 'Tudor' }}>hello</Lang>
     </LanguageProvider>

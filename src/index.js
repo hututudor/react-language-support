@@ -1,2 +1,6 @@
-export { LanguageProvider, LanguageContext } from './LanguageContext';
-export { Lang } from './Lang';
+export {
+  LanguageProvider,
+  LanguageContext
+} from './components/LanguageContext';
+export { Lang } from './components/Lang';
+export { createLanguageConfig } from './utils/createLanguageConfig';
