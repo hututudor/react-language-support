@@ -1,4 +1,4 @@
-# react-lang
+# react-language-support
 
 > Easy to use multi-language support library for React
 

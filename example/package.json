@@ -1,13 +1,13 @@
 {
-  "name": "react-lang-example",
-  "homepage": "https://hututudor.github.io/react-lang",
+  "name": "react-language-support-example",
+  "homepage": "https://hututudor.github.io/react-language-support",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
-    "react-lang": "file:.."
+    "react-language-support": "file:.."
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
