@@ -1,4 +1,7 @@
-# react-language-support
+---
+id: about
+title: About
+---
 
 > Easy to use multi-language support library for React
 
